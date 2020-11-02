@@ -148,6 +148,8 @@ p {
 }
 .header-in {
   height: 145px;
+  background-color: #ffffff;
+  z-index: 50;
 }
 .header-in .cv {
   height: 50px;
@@ -187,6 +189,7 @@ p {
   display: none;
 }
 .drawer-inner {
+  position: relative;
   width: 100vw;
   height: 95px;
 }
@@ -225,20 +228,19 @@ p {
   top: 10px;
 }
 #mobile-logo {
-  position: relative;
-  margin-left: 33vw;
+  display: inline-block;
+  margin: 0 auto;
+  position: absolute;
+  left: calc(50% - 55px);
+  top: 15px;
   color: #0b4fa3;
+  text-align: center;
 }
 #mobile-logo span {
-  position: absolute;
-  right: -24px;
   font-size: 16px;
   font-weight: 400;
 }
-/* .mobile-logo {
-  margin-left: 37vw;
-  color: #0b4fa3;
-} */
+
 #drawer-check:checked ~ .drawer-open span {
   background: rgba(255, 255, 255, 0);
 }
@@ -255,12 +257,17 @@ p {
   top: 90px;
   opacity: 0;
   width: 100%;
-  height: 150px;
   background-color: #ffffff;
   transition: opacity 0.3s;
 }
 .drawer-item {
   margin: 8px 0;
+}
+.drawer-item a {
+  line-height: 35px;
+}
+.drawer-item a:hover {
+  color: #0b4fa3;
 }
 .drawer-content a {
   color: #333;
@@ -419,5 +426,32 @@ footer .footer-cv:hover {
   }
   .drawer {
     display: block;
+  }
+}
+@media screen and (max-width: 795px) {
+  .header-in {
+    position: fixed;
+    top: 0;
+  }
+  .title {
+    font-size: 32px;
+  }
+  #information .item {
+    width: 100%;
+  }
+  #information .item img {
+    width: 100%;
+  }
+  #information .item:nth-child(3) img {
+    object-position: center 40%;
+  }
+  #information .item:nth-child(4) img {
+    object-position: center 30%;
+  }
+  #information .item:nth-child(6) img {
+    object-position: center 90%;
+  }
+  #fitness-info .title-inner p {
+    font-size: 32px;
   }
 }
