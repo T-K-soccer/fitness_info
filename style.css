@@ -255,10 +255,11 @@ p {
 .drawer-content {
   position: absolute;
   top: 90px;
-  opacity: 0;
+  /* opacity: 0; */
+  visibility: hidden;
   width: 100%;
   background-color: #ffffff;
-  transition: opacity 0.3s;
+  /* transition: opacity 0.3s; */
 }
 .drawer-item {
   margin: 8px 0;
@@ -273,7 +274,8 @@ p {
   color: #333;
 }
 #drawer-check:checked ~ .drawer-content {
-  opacity: 1;
+  /* opacity: 1; */
+  visibility: visible;
 }
 #header-nav-outer {
   max-width: 1020px;
